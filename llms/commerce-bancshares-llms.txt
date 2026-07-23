@@ -1,0 +1,28 @@
+# Commerce Bank
+
+> Commerce Bank is the principal banking subsidiary of Commerce Bancshares, Inc. (NASDAQ: CBSH), a Missouri-based regional bank holding company (~$32B in assets) with dual headquarters in Kansas City and St. Louis. Founded in 1865, it offers personal, business, commercial, and wealth-management services across the U.S. Midwest. Its API posture is corporate/embedded-banking oriented: a registration-gated external developer portal and a CommercePayments developer platform, plus ERP-embedded banking via Commerce Connections Direct. Consumer-permissioned data sharing is largely intermediated through aggregators (Plaid) and platforms (Modern Treasury) rather than a first-party self-serve open-banking API. No downloadable OpenAPI/Swagger is publicly available; the developer portal is access-gated (HTTP 403 to anonymous clients).
+
+## APIs
+
+- [Commerce Bank Developer APIs](https://developers.commercebank.com/): Corporate API program published through a registration-gated external developer portal and the CommercePayments developer platform, covering payments, treasury, and embedded-banking integrations for business and ERP systems. Access is partner/registration-gated; no public self-serve OpenAPI is published.
+
+## Docs
+
+- [Developer Portal](https://developers.commercebank.com/): Registration-gated external developer portal (anonymous access returns HTTP 403).
+- [Embedded Banking / Payables](https://www.commercebank.com/corporate/solutions/payments-treasury/payables/embedded-banking): ERP-embedded banking overview.
+- [How CommercePayments is Transforming Corporate Finance](https://www.commercebank.com/business/trends-and-insights/2024/how-commercepayments-is-transforming-corporate-finance-processes): CommercePayments platform overview.
+
+## Company
+
+- [Website](https://www.commercebank.com/)
+- [Trends & Insights (Blog)](https://www.commercebank.com/business/trends-and-insights)
+- [Terms of Use](https://www.commercebank.com/terms-of-use)
+- [Privacy Statement](https://www.commercebank.com/security-center/privacy-statement)
+- [Contact / Support](https://www.commercebank.com/contact-us)
+- [LinkedIn](https://www.linkedin.com/company/commerce_bank)
+
+## Notes
+
+- No public OpenAPI, AsyncAPI, GraphQL, or MCP surface is anonymously reachable; the developer portal is WAF/registration-gated.
+- Domain security probed: TLS 1.3 on www and developers hosts; HSTS on www (max-age 63072000); SPF + DMARC (quarantine) on commercebank.com; no DNSSEC, no CAA.
+- No RFC 9116 security.txt is published (/.well-known/security.txt resolves to a soft-404 page).

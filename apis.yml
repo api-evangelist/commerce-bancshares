@@ -50,6 +50,8 @@ apis:
   - type: Documentation
     url: https://www.commercebank.com/business/trends-and-insights/2024/how-commercepayments-is-transforming-corporate-finance-processes
 common:
+- type: DomainSecurity
+  url: security/commerce-bancshares-domain-security.yml
 - type: Website
   url: https://www.commercebank.com/
 - type: DeveloperPortal
@@ -64,6 +66,8 @@ common:
   url: https://www.commercebank.com/contact-us
 - type: LinkedIn
   url: https://www.linkedin.com/company/commerce_bank
+- type: LLMsTxt
+  url: llms/commerce-bancshares-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
