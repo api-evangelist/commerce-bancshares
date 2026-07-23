@@ -1,0 +1,69 @@
+aid: commerce-bancshares
+url: https://raw.githubusercontent.com/api-evangelist/commerce-bancshares/refs/heads/main/apis.yml
+name: Commerce Bank
+kind: company
+description: >-
+  Commerce Bank is the principal banking subsidiary of Commerce Bancshares,
+  Inc. (NASDAQ CBSH), a Missouri-based regional bank holding company with roughly
+  $32 billion in assets and dual headquarters in Kansas City and St. Louis. Commerce
+  Bank is a Missouri state-chartered bank and Federal Reserve member, founded in 1865,
+  offering personal, business, commercial, and wealth-management services across the
+  U.S. Midwest. Its API posture is corporate/embedded-banking oriented rather than a
+  fully open public program: it runs a registration-gated external developer portal
+  (developers.commercebank.com) and a CommercePayments developer platform, and delivers
+  ERP-embedded banking via Commerce Connections Direct. Consumer-permissioned data
+  sharing is largely intermediated through aggregators such as Plaid and platforms
+  like Modern Treasury rather than a documented first-party, self-serve open-banking
+  API. No public FDX or CFPB Section 1033 data-access posture is documented, and no
+  downloadable OpenAPI/Swagger is publicly available.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Regional Bank
+- Payments
+- Treasury Management
+- Embedded Banking
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis:
+- aid: commerce-bancshares:commerce-developer-apis
+  name: Commerce Bank Developer APIs
+  description: Commerce Bank's corporate API program, published through a registration-gated
+    external developer portal and the CommercePayments developer platform, covering
+    payments, treasury, and embedded-banking integrations for business and ERP systems.
+    Access is partner/registration-gated; no public self-serve OpenAPI is published.
+  humanURL: https://developers.commercebank.com/
+  tags:
+  - Payments
+  - Treasury Management
+  - Embedded Banking
+  properties:
+  - type: Documentation
+    url: https://developers.commercebank.com/
+  - type: Documentation
+    url: https://www.commercebank.com/corporate/solutions/payments-treasury/payables/embedded-banking
+  - type: Documentation
+    url: https://www.commercebank.com/business/trends-and-insights/2024/how-commercepayments-is-transforming-corporate-finance-processes
+common:
+- type: Website
+  url: https://www.commercebank.com/
+- type: DeveloperPortal
+  url: https://developers.commercebank.com/
+- type: Blog
+  url: https://www.commercebank.com/business/trends-and-insights
+- type: TermsOfService
+  url: https://www.commercebank.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.commercebank.com/security-center/privacy-statement
+- type: Support
+  url: https://www.commercebank.com/contact-us
+- type: LinkedIn
+  url: https://www.linkedin.com/company/commerce_bank
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

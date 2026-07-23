@@ -1,0 +1,90 @@
+aid: commerce-bancshares
+name: Commerce Bank
+review:
+  question: Does Commerce Bank expose a public, self-serve first-party API with a
+    downloadable OpenAPI/Swagger, and what is its U.S. open-finance posture (FDX /
+    CFPB 1033 / aggregator)?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Commerce Bank (Commerce Bancshares, Inc., NASDAQ CBSH) operates a genuine
+    first-party external developer portal at https://developers.commercebank.com/,
+    but it is corporate/registration-gated and does NOT expose a public, anonymous,
+    self-serve API. The portal is protected by an Imperva/Incapsula bot wall and
+    returned HTTP 403 to every automated request during this review, so no anonymous
+    200, no API-product catalog, and no downloadable OpenAPI/Swagger could be
+    harvested. Commerce is building the CommercePayments developer platform (APIs +
+    batch file transfers for real-time corporate data exchange) and delivers
+    ERP-embedded banking via Commerce Connections Direct. Consumer-permissioned data
+    access and payment initiation are largely intermediated through aggregators
+    (Plaid) and platforms (Modern Treasury) rather than a documented first-party
+    open-banking API. No public FDX participation statement and no CFPB Section 1033
+    data-access posture were found on Commerce Bank's public pages. Authentication
+    model for the portal is not publicly documented (registration/partner-gated);
+    no public API key, OAuth2/OIDC, or mTLS onboarding flow is exposed anonymously.
+  posture:
+    firstPartyDeveloperPortal: true
+    developerPortalUrl: https://developers.commercebank.com/
+    developerPortalLiveHttpStatus: 403
+    developerPortalNote: >-
+      Live domain behind Imperva/Incapsula; returns a 403 Incapsula challenge to
+      bots/curl/WebFetch. Confirmed as Commerce Bank's external developer portal via
+      search-result identity, not via an anonymous 200.
+    downloadableOpenAPI: false
+    embeddedBanking: true
+    embeddedBankingProduct: Commerce Connections Direct (ERP-embedded banking)
+    fdxParticipant: false
+    section1033Posture: none-documented
+    aggregatorAccess:
+    - Plaid
+    - Modern Treasury
+    authModel: not-publicly-documented (registration/partner-gated)
+    specProvenance: none (no public spec available to harvest)
+  transports:
+  - protocol: REST
+    scheme: https
+    documented: partial
+    note: >-
+      A first-party REST API program is referenced (CommercePayments / developer
+      portal) but endpoint base URLs and reference docs are gated behind
+      registration; no public REST base URL is documented anonymously.
+  probes:
+  - url: https://developers.commercebank.com/
+    httpStatus: 403
+    note: Incapsula/Imperva bot wall; genuine external developer portal, gated.
+  - url: https://www.commercebank.com/
+    httpStatus: 200
+    note: Public marketing/banking site.
+  - url: https://www.commercebank.com/corporate/solutions/payments-treasury/payables/embedded-banking
+    httpStatus: 200
+    note: Commerce Connections Direct embedded-banking product page (real product docs).
+  - url: https://developer.commercebank.com
+    httpStatus: 000
+    note: Does not resolve (singular 'developer' host); portal uses plural 'developers'.
+  - url: https://api.commercebank.com
+    httpStatus: 000
+    note: No public API host resolves.
+sources:
+- url: https://developers.commercebank.com/
+  type: DeveloperPortal
+  note: Commerce Bank external developer portal (Incapsula-gated, 403 to bots).
+- url: https://www.commercebank.com/corporate/solutions/payments-treasury/payables/embedded-banking
+  type: Documentation
+  note: Commerce Connections Direct embedded-banking product (ERP integration).
+- url: https://www.commercebank.com/business/trends-and-insights/2024/how-commercepayments-is-transforming-corporate-finance-processes
+  type: Documentation
+  note: CommercePayments outward-facing developer platform (APIs + batch file transfers).
+- url: https://plaid.com/institutions/commerce-bank/
+  type: Documentation
+  note: Aggregator (Plaid) coverage for Commerce Bank consumer data access.
+- url: https://www.moderntreasury.com/integrations/commerce-bank
+  type: Documentation
+  note: Modern Treasury partner-gated integration layer over Commerce Bank accounts.
+actions:
+  openapiHarvested: false
+  reason: >-
+    No publicly downloadable OpenAPI/Swagger exists; the developer portal is
+    registration- and WAF-gated, so nothing could be harvested verbatim without
+    fabrication. Identity + honest posture recorded only.
