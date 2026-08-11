@@ -50,6 +50,8 @@ apis:
   - type: Documentation
     url: https://www.commercebank.com/business/trends-and-insights/2024/how-commercepayments-is-transforming-corporate-finance-processes
 common:
+- type: Login
+  url: https://banking.commercebank.com/cbi/login.aspx
 - type: DomainSecurity
   url: security/commerce-bancshares-domain-security.yml
 - type: Website
