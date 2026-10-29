@@ -1,4 +1,4 @@
-# Commerce Bank (commerce-bancshares)
+# Commerce Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,68 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Commerce Bank is the principal banking subsidiary of Commerce Bancshares, Inc. (NASDAQ: CBSH), a Missouri-based regional bank holding company with roughly $32 billion in assets and dual headquarters in Kansas City and St. Louis. Founded in 1865, Commerce Bank is a Missouri state-chartered bank and Federal Reserve member offering personal, business, commercial, payments/treasury, and wealth-management services across the U.S. Midwest.
+Commerce Bank is the principal banking subsidiary of Commerce Bancshares, Inc. (NASDAQ CBSH), a Missouri-based regional bank holding company with roughly $32 billion in assets and dual headquarters in Kansas City and St. Louis. Commerce Bank is a Missouri state-chartered bank and Federal Reserve member, founded in 1865, offering personal, business, commercial, and wealth-management services across the U.S. Midwest. Its API posture is corporate/embedded-banking oriented rather than a fully open public program: it runs a registration-gated external developer portal (developers.commercebank.com) and a CommercePayments developer platform, and delivers ERP-embedded banking via Commerce Connections Direct. Consumer-permissioned data sharing is largely intermediated through aggregators such as Plaid and platforms like Modern Treasury rather than a documented first-party, self-serve open-banking API. No public FDX or CFPB Section 1033 data-access posture is documented, and no downloadable OpenAPI/Swagger is publicly available.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/commerce-bancshares/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/commerce-bancshares/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Regional Bank · Payments · Treasury Management · Embedded Banking · Open Finance
 
-## Open Finance / API Posture
+## Commerce Bank on APIs.io
 
-The U.S. has no single mandated open-banking contract; open finance is voluntary and fragmented. Commerce Bank's posture is corporate- and embedded-banking oriented rather than a fully open, self-serve public API program:
+Everything profiled for Commerce Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/commerce-bancshares/](https://apis.io/providers/commerce-bancshares/)** — or go straight to one of the APIs or properties below.
 
-- **First-party developer portal:** Commerce Bank runs an external developer portal at [developers.commercebank.com](https://developers.commercebank.com/). It is genuinely live but sits behind an Imperva/Incapsula bot wall and requires registration — no anonymous `200` and no publicly downloadable OpenAPI/Swagger were obtained during this review.
-- **CommercePayments developer platform:** Commerce is building an outward-facing developer platform exposing APIs and batch file transfers for real-time data exchange with customers' business systems.
-- **Embedded banking:** Commerce Connections® Direct embeds payments and banking utilities directly into ERP/accounting systems (Sage, QuickBooks, NetSuite, Microsoft Business Central).
-- **Aggregator / partner access:** Consumer-permissioned data and payment initiation are largely intermediated through aggregators such as **Plaid** and platforms like **Modern Treasury**, not a documented first-party self-serve API.
-- **FDX / CFPB Section 1033:** No public Financial Data Exchange (FDX) participation statement or CFPB Section 1033 data-access posture is documented on Commerce Bank's public pages.
+### APIs (1)
 
-## Tags
+- [Commerce Bank Developer APIs](https://apis.io/apis/commerce-bancshares/commerce-developer-apis/) — Commerce Bank's corporate API program, published through a registration-gated external developer portal and the CommercePayments developer platform,…
 
-- Financial Services
-- Banking
-- United States
-- Regional Bank
-- Payments
-- Treasury Management
-- Embedded Banking
-- Open Finance
-- Data Aggregation
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+#### Security (1)
 
-## APIs
+Authentication, trust centre, and vulnerability disclosure.
 
-### Commerce Bank Developer APIs
+- [Commerce Bancshares Domain Security](https://apis.io/security/commerce-bancshares/commerce-bancshares-domain-security/)
 
-Commerce Bank's corporate API program, published through a registration-gated external developer portal and the CommercePayments developer platform, covering payments, treasury, and embedded-banking integrations for business and ERP systems. Access is partner/registration-gated; no public self-serve OpenAPI is published.
+## Where to find this API
 
-- **Human URL:** [https://developers.commercebank.com/](https://developers.commercebank.com/)
-
-#### Tags
-
-- Payments
-- Treasury Management
-- Embedded Banking
-
-#### Properties
-
-- [Developer Portal](https://developers.commercebank.com/)
-- [Embedded Banking (Commerce Connections Direct)](https://www.commercebank.com/corporate/solutions/payments-treasury/payables/embedded-banking)
-- [CommercePayments overview](https://www.commercebank.com/business/trends-and-insights/2024/how-commercepayments-is-transforming-corporate-finance-processes)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.commercebank.com/)
-- [Developer Portal](https://developers.commercebank.com/)
-- [Blog](https://www.commercebank.com/business/trends-and-insights)
-- [Terms of Service](https://www.commercebank.com/terms-of-use)
-- [Privacy Policy](https://www.commercebank.com/security-center/privacy-statement)
 - [Support](https://www.commercebank.com/contact-us)
-- [LinkedIn](https://www.linkedin.com/company/commerce_bank)
+- [Blog](https://www.commercebank.com/business/trends-and-insights)
+- [Terms of service](https://www.commercebank.com/terms-of-use)
+- [Privacy policy](https://www.commercebank.com/security-center/privacy-statement)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 13.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 17.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 7.9** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/commerce-bancshares/](https://apis.io/providers/commerce-bancshares/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Commerce Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/commerce-bancshares/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
